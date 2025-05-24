@@ -47,14 +47,15 @@ def search_and_display(location, keyword, max_results):
 # set up the gradio user interface
 with gr.Blocks(title='event analyzer') as demo:
     # ui title and description
-    gr.Markdown('# ticketmaster event analyzer')
-    gr.Markdown('search for events and see ai-generated summaries using ollama')
+    gr.Markdown('# Ticketmaster Event Finder & Summarizer')
+    gr.Markdown('Search for events by state and see AI generated summaries (ollama model)')
 
     # input fields for user query
     with gr.Row():
         location = gr.Textbox(label='location', placeholder='e.g. new york, miami, san francisco')
         keyword = gr.Textbox(label='keyword', placeholder='e.g. sports, music, comedy')
-        count = gr.Slider(1, 10, value=5, label='number of events')
+        # step = 1 to esnure all slider values are type int
+        count = gr.Slider(1, 10, value=5, step=1, label='number of events')
         search_btn = gr.Button('search events')
 
     # output area to display results
