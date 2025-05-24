@@ -13,6 +13,9 @@ if not API_KEY:
     raise ValueError('error: TICKETMASTER_API_KEY not found in .env file')
 
 # import local functions for api and llm-based summarization
+'''
+FILE NAMES WHERE ON LOCAL MACHINE - NEED TO BE RENAMED BEFORE SUBMISSION
+'''
 from step3_api import fetch_events
 from step2_llm import generate_summary
 
