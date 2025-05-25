@@ -86,4 +86,4 @@ with gr.Blocks(theme=TicketmasterTheme(), title='event analyzer') as demo:
 
 # launch the gradio app
 if __name__ == '__main__':
-    demo.launch()
+    demo.launch(share = True)
